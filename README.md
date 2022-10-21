@@ -1,4 +1,5 @@
-#Programm zur Vorlesung vom 20.10.2022 - Einstieg in C++
+# Programm zur Vorlesung vom 20.10.2022 - Einstieg in C++
+
 In diesem Programm soll die Verwendung von objektorientierten Features der Programmiersprache C++ demonstriert werden.
 
 Ziel soll es sein, ein Objekt anzulegen, welches über einen Konstruktor verfügt und private Membervariablen hat die gesetzt werden sollen.
