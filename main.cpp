@@ -1,8 +1,11 @@
 #include <iostream>
 #include "warehouse.hpp"
+#include <stream>
 
-int main() {
-  warehouse_t pullover{};
-  pullover.get_inventory_info();
-  //std::cout << pullover.get_inventory_info() << std::endl;
+// > onlineshop -i ./lagerdatei.txt
+
+int main(int argc, char** argv) {
+  warehouse_t onlineshop{}; //hier wird ein Onlineshop erstellt aus einer Lagerdatei
+  
+  onlineshop.run();
 }

@@ -1,9 +1,6 @@
-#include <string>
 #include <iostream>
 struct warehouse_t {
 private:
-  std::string lagerdatei{};
-  
   //Warenmatrix: [x][.][.][.]: Aufdruck:   x=0: Pink Floyd, x=1: ACDC,  x=2: Eagles, x=3: Rolling Stones;
   //Warenmatrix: [.][x][.][.]: Farbe:      x=0: Schwarz,    x=1: Braun, x=2: Grau,   x=3: Weiß;
   //Warenmatrix: [.][.][x][.]: Größe:      x=0: S,          x=1: M,     x=2: L,      x=3: XL;
@@ -202,79 +199,4 @@ public:
               << "    END    " << std::endl
               << "===========" << std::endl;
   };
-
-
-  warehouse_t(){
-    // Hier würde z.B. die Datenbank initialisiert
-    // Öffnen eines Webservers
-  }
-
-  ~warehouse_t(){
-    // Hier würde die Datenbank zurückgespeichert
-  }
-
-  int print_options(){
-    std::cout << "Was möchten Sie gerne tun?"       << std::endl 
-            << "(1) Warenkatalog anzeigen"          << std::endl
-            << "(2) Inhalt des Warenkorbs anzeigen" << std::endl
-            << "(0) Programm beenden"               << std::endl;
-    int nutzerauswahl{};
-    std::cin >> nutzerauswahl;
-
-    return nutzerauswahl;
-  }
-
-  void zeige_warenkatalog(){
-    // std::cout << alles was im Katalog ist
-    // optionen anzeigen
-    // (1) Objekt in den Warenkorb legen
-    // (2) Lagerbestand anzeigen
-    // (0) Zurück
-    int auswahl{};
-    std::cin >> auswahl;
-
-    switch(auswahl){
-      case 1:
-            std::cout << "Welche Artikelnummer? ";
-            int artikelnummer{};
-            std::cin >> artikelnummer;
-            // add_to_cart(artikelnummer);
-            break;
-      case 2:
-            //print_lagerbestände;
-            break;
-      case 0:
-            return;
-      default:
-            std::cout << "Ungültige Eingabe!";
-            return;
-    }
-
-  }
-
-  void zeige_warenkorb(){
-    std::cout << inhalte_des_warenkorbs     << std::endl;
-    std::cout << "Was möchten Sie tun? "    << std::endl
-              << "(1) Einkauf abschließen"  << std::endl
-              << "(2) Artikel löschen"      << std::endl;
-    int auswahl{};
-    std::cin >> auswahl;
-    switch(auswahl)......
-  }
-
-  int run(){
-    print_welcome_dialog();
-    while(true){                              //Program Superloop
-      int auswahl = print_options();
-      switch(auswahl){
-        case 1: zeige_warenkatalog();       break;
-        case 2: zeige_warenkorb();          break;
-        case 0: return 0;                   break;
-        default: 
-            std::cout << "Ungültige Eingabe!" << std::endl;
-            continue;
-      }
-    }
-  }
-
 };
